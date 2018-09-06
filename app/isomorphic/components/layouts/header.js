@@ -32,9 +32,15 @@ let HeaderWrapper = props => {
 }
 
 let HeaderLogo = props => {
-  return <img src={props.logo.url} alt={props.logo.heading} styleName="Logo"/>
+  return <a href="#"><img src={props.logo.url} alt={props.logo.heading} styleName="PublisherLogo"/></a>
 }
 
+const Mobilenavlogo = (props) => {
+  return <i className="fa fa-bars" styleName="mobileLogo"></i>
+}
+const Iconsearch = (props) => {
+  return <button className="fa fa-search" aria-hidden="true" styleName="searchIcon"></button>
+}
 let Header = props => {
   return (
     <div styleName="Header">
@@ -43,8 +49,10 @@ let Header = props => {
           <HeaderWrapper menu={props.menu} />
         </div>
       </div>
-      <div className="container">
+      <div className="container" styleName="Logo">
+        <Mobilenavlogo />
         <HeaderLogo logo = {props.logo} />
+        <Iconsearch />
       </div>
     </div>
   )

@@ -1,5 +1,5 @@
 .Header {
-  background-color: #fff;
+  background-color: var(--white);
 }
 .TopHeader {
   display: none;
@@ -21,34 +21,59 @@
 }
 .LaguageFont,
 .Date {
-  font-weight: 700;
-  color: #7b7b7b;
-  font-size: 1em;
-  border-left: 2px solid #ccc;
+  font-weight: var(--bold);
+  color: var(--nav-menu-dropdown-font-color);
+  text-decoration: none;
+  border-left: 2px solid var(--gray);
   padding: 0 10px;
 }
 .Date {
   border-left: none;
 }
 .LaguageFont:hover {
-  color: #000;
-  border-color: #000;
-  font-weight: 900;
+  color: var(--black);
+  border-color: var(--black);
+  font-weight: var(--bolder);
 }
-.Date {
-  padding-right: 10px;
-}
+
 .Logo {
+  display: flex;
+  align-items: center;
+}
+.mobileLogo {
+  font-size: var(--fontSize-3);
+  color: var(--accent);
+  cursor: pointer;
+}
+.PublisherLogo {
   padding: 20px 0;
-  height: 80px;
+  width: 50%;
+}
+.searchIcon {
+  display: block;
+  color: var(--accent);
+  font-size: var(--fontSize-4);
+  padding-right: var(--base-spacing);
+  margin-left: auto;
+  background: var(--white);
+  border-color: var(--white);
+  outline: none;
+  cursor: pointer;
 }
 @media screen and (min-width: 767px) {
   .TopHeader {
     display: block;
-    background-color:  #f2f2f2;
-    padding: 15px 0;
+    background-color:  var(--top-header-background-color);
+    padding: 10px 0;
   }
-  .Logo {
-    height: 110px;
+  .PublisherLogo {
+    height: calc(var(--base-spacing-desktop)*4.5);
+    width: auto;
+  }
+  .mobileLogo {
+    display: none;
+  }
+  .searchIcon {
+    display: none;
   }
 }
