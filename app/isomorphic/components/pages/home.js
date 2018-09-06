@@ -3,7 +3,6 @@ import React from "react";
 import assetify from "@quintype/framework/assetify";
 
 import { getCollectionTemplate } from "../get-collection-template";
-// import { Twocolninecomponent } from "../Twocolninecomponent";
 
 import { Header } from "../layouts/header";
 import { Nav } from "../layouts/nav";
@@ -37,6 +36,33 @@ const menu = {
   }]
 }
 
+const NavMenu =[{
+  url: '#',
+  name: 'News',
+  children: [{
+    url: '#',
+    name: 'Market',
+  }, {
+    url: '#',
+    name: 'Bollybood',
+  }]
+}, {
+  url: '#',
+  name: 'Delhi',
+}, {
+  url: '#',
+  name: 'Market',
+}, {
+  url: '#',
+  name: 'Bollybood',
+}, {
+  url: '#',
+  name: 'Travel',
+}, {
+  url: '#',
+  name: 'Cricket',
+}];
+
 const logo = {
   url: 'https://d1y1r594kapmgi.cloudfront.net/sakshipost/assets/sakshipost-logo-416180c61c1e354365e90d654b29a29dcfc0f7c33f20a930430499d9d58d724f.jpg',
   heading: 'sakshipost'
@@ -46,6 +72,8 @@ const HomePage = props => {
   return (
     <div>
       <Header menu={menu} logo={logo} />
+      <Nav navMenu={NavMenu}/>
+      <Twocolninegrid stories={props.data.collection.items[0].items} />
     </div>
   )
 };
