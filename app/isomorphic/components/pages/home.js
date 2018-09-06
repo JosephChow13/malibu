@@ -3,6 +3,7 @@ import React from "react";
 import assetify from "@quintype/framework/assetify";
 
 import { getCollectionTemplate } from "../get-collection-template";
+import { Twocolninegrid } from "../collection-templates/two-col-nine-grid";
 
 import { Header } from "../layouts/header";
 import { Nav } from "../layouts/nav";

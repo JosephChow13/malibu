@@ -1,0 +1,102 @@
+.homePageTopAddCard {
+  display: none;
+}
+.topNewsTiltle {
+  grid-column: 1 / 10;
+  margin: 20px 0 10px 0;
+  border-bottom: 2px solid var(--secondry-color);
+  text-transform: uppercase;
+  &__heading {
+    font-size: var(--fontSize-7);
+    font-weight: var(--bold);
+    text-transform: uppercase;
+    margin: 0;
+    background-color: var(--secondry-color);
+    padding: calc(var(--base-spacing)*0.5);
+    width: calc(var(--base-spacing-desktop)*4.5);
+    color: var(--white);
+  }
+}
+.topStoryHeading {
+  font-size: var(--fontSize-6);
+  margin: 6px 0;
+}
+.mediumCard {
+  display: flex;
+  margin: 10px 0;
+}
+.mediumCardImage {
+  height: calc(var(--base-spacing)*4);
+}
+.topStoryMiddleHeading {
+  font-size: var(--fontSize-7);
+  font-weight: var(--regular);
+  color: var(--secondry-color);
+  padding-left: calc(var(--base-spacing)*0.5);
+}
+.smallStoryCardImage {
+  display: none;
+}
+.smallHeading {
+  font-size: var(--fontSize-7);
+  font-weight: var(--regular);
+}
+@media (min-width: 767px) {
+  .card {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-gap: calc(var(--base-spacing-desktop)*.5);
+  }
+  .homePageTopCollectionCard {
+    grid-column: 1 / 10;
+    display: grid;
+    grid-template-columns: repeat(9,1fr);
+    grid-gap: calc(var(--base-spacing-desktop)*.5);
+  }
+  .homePageTopAddCard {
+    display: block;
+    grid-column: 10 / 13;
+  }
+  .topStory {
+    grid-column: 1 / 7;
+  }
+  .otherTopStory {
+    grid-column: 7 / 10;
+  }
+  .twoCol {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-gap: calc(var(--base-spacing-desktop)*.5);
+  }
+  .mediumCard {
+    display: block;
+    grid-column: span 3;
+  }
+  .mediumCardImage {
+    height: auto;
+  }
+  .topStoryMiddleHeading {
+    font-size: var(--fontSize-7);
+    margin: 6px 0;
+    font-weight: var(--bold);
+    padding: 0;
+  }
+  .smallHeading {
+    margin: 0 5px ;
+  }
+  .smallCard {
+    display: flex;
+    padding: 1em 0;
+  }
+  .smallCard:not(:last-child) {
+    border-bottom: 1px solid var(--small-card-border-bottom-color);
+  }
+  .smallCard:first-child {
+    padding-top: 0;
+  }
+  .smallStoryCardImage {
+    display: block;
+    height: calc(var(--base-spacing-desktop)*2.5);
+  }
+}
+
