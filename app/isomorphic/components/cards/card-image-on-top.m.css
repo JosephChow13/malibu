@@ -1,0 +1,59 @@
+.cardHeaderInlineDisplayMobile--small {
+  display: flex;
+  margin: 10px 0;
+}
+.cardHeaderInlineDisplayMobile--big {
+  display: block;
+}
+.small {
+  width: 33.33%;
+}
+.big {
+  width: 100%;
+}
+.cardImageOnTop {
+    display: block;
+    width: 100%;
+    padding-top: 56.25%;
+    position: relative;
+}
+.cardImage {
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+.cardImageOnTop--big {
+  font-size: var(--fontSize-6);
+  font-weight: var(--bold);
+}
+
+.cardImageOnTop--small {
+  font-size: var(--fontSize-7);
+  font-weight: var(--regular);
+  color: var(--secondry-color);
+  padding-left: calc(var(--base-spacing)*0.5);
+}
+
+@media (min-width: 767px) {
+  .cardHeaderInlineDisplayMobile--small {
+    display: block;
+    grid-column: span 3;
+  }
+  .cardHeaderInlineDisplayMobile {
+    display: block;
+    margin: 15px 0;
+  }
+  .small {
+    width: 100%;
+  }
+  .cardImageOnTop--small {
+    font-size: var(--fontSize-7);
+    font-weight: var(--bold);
+    padding: 0;
+  }
+}

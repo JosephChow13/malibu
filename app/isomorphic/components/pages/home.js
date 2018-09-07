@@ -3,7 +3,8 @@ import React from "react";
 import assetify from "@quintype/framework/assetify";
 
 import { getCollectionTemplate } from "../get-collection-template";
-import { Twocolninegrid } from "../collection-templates/two-col-nine-grid";
+import { TwoColNineGrid } from "../collection-templates/two-col-nine-grid";
+import { ThreeColLayout } from "../collection-templates/three-col-layout-grid";
 
 import { Header } from "../layouts/header";
 import { Nav } from "../layouts/nav";
@@ -70,11 +71,13 @@ const logo = {
 }
 
 const HomePage = props => {
+  const getImageUrl = s3Key => `https://${props.config['cdn-image']}/${s3Key}`;
   return (
     <div>
       <Header menu={menu} logo={logo} />
       <Nav navMenu={NavMenu}/>
-      <Twocolninegrid stories={props.data.collection.items[0].items} />
+      <TwoColNineGrid stories={props.data.collection} getImageUrl={getImageUrl}/>
+      <ThreeColLayout stories={props.data.collection} getImageUrl={getImageUrl} />
     </div>
   )
 };

@@ -1,0 +1,48 @@
+.leftCardHeading {
+  font-size: var(--fontSize-7);
+  font-weight: var(--regular);
+  padding: 0 10px;
+  margin: 0;
+  width: 53%;
+}
+.leftCard {
+  display: flex;
+}
+.imageCard {
+  width: 47%;
+}
+.sideImagePicture {
+  display: block;
+  width: 100%;
+  padding-top: 56.25%;
+  position: relative;
+}
+.leftCardImage {
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+.topNews {
+  display: none;
+}
+.latest {
+  display: block;
+}
+@media (min-width: 767px) {
+  .leftCardImage {
+    display: block;
+    height: calc(var(--base-spacing-desktop)*2.5);
+  }
+  .leftCardHeading {
+    margin: 0 5px ;
+    font-size: 12px;
+  }
+  .topNews {
+    display: inherit;
+  }
+}

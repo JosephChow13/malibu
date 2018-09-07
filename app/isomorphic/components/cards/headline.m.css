@@ -1,0 +1,10 @@
+.headingWrapper {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+.headlines {
+  font-size: var(---fontSize-8);
+  font-weight: var(--bold);
+  word-break: break-all;
+  margin: 0;
+}

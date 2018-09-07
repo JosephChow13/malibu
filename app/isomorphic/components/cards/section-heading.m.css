@@ -1,0 +1,16 @@
+.topNewsTiltle {
+  grid-column: 1 / 10;
+  margin: 20px 0 10px 0;
+  border-bottom: 2px solid var(--secondry-color);
+  text-transform: uppercase;
+}
+.topNewsTiltleHeading {
+  font-size: var(--fontSize-7);
+  font-weight: var(--bold);
+  text-transform: uppercase;
+  margin: 0;
+  background-color: var(--secondry-color);
+  padding: calc(var(--base-spacing)*0.5);
+  width: calc(var(--base-spacing-desktop)*4.5);
+  color: var(--white);
+}
