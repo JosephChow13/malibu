@@ -25,7 +25,7 @@ export default function measureScrollDepthLater(cssSelector, storyId, {wait = 15
     }
 
     global.window.addEventListener('scroll', function() {
-      if(global.screen.scrollY > maxWindowTop) {
+      if(global.window.scrollY > maxWindowTop) {
         maxWindowTop = global.scrollY
       }
     });
