@@ -3,6 +3,7 @@
 import React from "react";
 import { InfiniteStoryBase } from "@quintype/components";
 import { BlankStory } from "../story-templates/blank";
+import scrollDepth from './scroll-depth';
 
 function StoryPageBase({ index, story, otherProp }) {
   // Can switch to a different template based story-template, or only show a spoiler if index > 0
@@ -24,21 +25,25 @@ function storyPageLoadItems(pageNumber) {
     );
 }
 
-function StoryPage(props) {
-  return (
-    <InfiniteStoryBase
-      {...props}
-      render={StoryPageBase}
-      loadItems={storyPageLoadItems}
-      onInitialItemFocus={item =>
-        app.registerPageView(
-          { pageType: "story-page", data: { story: item.story } },
-          `/${item.story.slug}`
-        )
-      }
-      onItemFocus={item => console.log(`Story In View: ${item.story.headline}`)}
-    />
-  );
-}
+export class StoryPage extends React.Component {
+  componentDidMount() {
+    scrollDepth(`.story-page[data-story-content-id="${this.props.data.story.id}"]`, this.props.data.story.id);
+  }
 
-export { StoryPage };
+  render() {
+    return (
+      <InfiniteStoryBase
+        {...this.props}
+        render={StoryPageBase}
+        loadItems={storyPageLoadItems}
+        onInitialItemFocus={item =>
+          app.registerPageView(
+            { pageType: "story-page", data: { story: item.story } },
+            `/${item.story.slug}`
+          )
+        }
+        onItemFocus={item => console.log(`Story In View: ${item.story.headline}`)}
+      />
+    );
+  }
+}

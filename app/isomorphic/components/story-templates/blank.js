@@ -38,7 +38,7 @@ function BlankStoryTemplate(props) {
 
 function BlankStory(props) {
   return (
-    <div className="story-grid">
+    <div className="story-grid story-page" data-story-content-id={props.story.id}>
       <BlankStoryTemplate story={props.story} />
     </div>
   );
