@@ -1,4 +1,4 @@
-const BEACON_PATH = 'http://localhost:3000/beacon';
+const BEACON_PATH = 'https://x.staging.scrolltype.com/beacon';
 
 export default function measureScrollDepthLater(cssSelector, storyId, {wait = 1500, path = BEACON_PATH} = {}) {
   if('addEventListener' in global.window && 'onpagehide' in global.window && 'querySelector' in global.document && 'performance' in global.window && 'sendBeacon' in global.navigator) {
