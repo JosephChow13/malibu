@@ -1,0 +1,28 @@
+.story {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  overflow: hidden;
+  display: block;
+}
+
+.hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel {
+  :global(.control-arrow) {
+    display: none;
+    margin: 74px;
+    top: calc(50% - 27px) !important;
+    height: 54px !important;
+    width: 32px !important;
+    opacity: 1 !important;
+  }
+
+  &:hover :global(.control-arrow) {
+    display: block;
+  }
+}

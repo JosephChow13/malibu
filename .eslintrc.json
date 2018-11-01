@@ -4,13 +4,15 @@
     "plugin:react/recommended",
     "plugin:jest/recommended",
     "plugin:prettier/recommended",
+    "plugin:css-modules/recommended",
     "prettier/react",
     "prettier/standard"
   ],
   "plugins": [
     "react",
     "standard",
-    "jest"
+    "jest",
+    "css-modules"
   ],
   "parserOptions": {
     "ecmaFeatures": {
