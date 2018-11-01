@@ -7,6 +7,7 @@ export default function DefaultCarousel(props) {
     <Carousel
       showThumbs={false}
       showStatus={false}
+      showIndicators={false}
       showArrows
       autoPlay
       emulateTouch

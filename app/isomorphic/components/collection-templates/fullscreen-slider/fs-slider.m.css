@@ -1,9 +1,30 @@
+.carousel {
+  :global(.control-arrow) {
+    margin: 4%;
+    top: calc(50% - 27px) !important;
+    height: 54px !important;
+    width: 32px !important;
+    opacity: 1 !important;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      cursor: pointer;
+    }
+    :global(.control-arrow) {
+      display: none;
+    }
+    &:hover :global(.control-arrow) {
+      display: block;
+    }
+  }
+}
+
 .story {
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%;
+  height: 0;
+  padding-top: calc(100% * (9 / 16));
   overflow: hidden;
-  display: block;
+  position: relative;
 }
 
 .hero {
@@ -12,17 +33,23 @@
   left: 0;
 }
 
-.carousel {
-  :global(.control-arrow) {
-    display: none;
-    margin: 74px;
-    top: calc(50% - 27px) !important;
-    height: 54px !important;
-    width: 32px !important;
-    opacity: 1 !important;
-  }
+.author,
+.section {
+  text-transform: uppercase;
+}
 
-  &:hover :global(.control-arrow) {
-    display: block;
+.details {
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  right: 15%;
+  z-index: 200;
+  padding-bottom: 56px;
+
+  h2,
+  .author,
+  .section {
+    color: white;
+    text-align: left;
   }
 }
