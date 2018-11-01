@@ -22,13 +22,14 @@
 
 .story {
   height: 0;
-  padding-top: calc(100% * (9 / 16));
+  padding-top: 500px;
   overflow: hidden;
   position: relative;
 }
 
 .hero {
   position: absolute;
+  height: 100%;
   top: 0;
   left: 0;
 }
