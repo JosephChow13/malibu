@@ -9,7 +9,8 @@
   "dependencies": {
     "@quintype/components": "^1.39.0",
     "@quintype/framework": "^2.80.0",
-    "@quintype/seo": "^1.14.1",
+    "@quintype/seo": "^1.8.1",
+    "cypress": "^3.1.1",
     "lodash": "^4.17.11",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
@@ -35,6 +36,7 @@
     "eslint": "^5.7.0",
     "eslint-config-prettier": "^3.1.0",
     "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-cypress": "^2.1.2",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jest": "^21.26.2",
     "eslint-plugin-node": "^7.0.1",
