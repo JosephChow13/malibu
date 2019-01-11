@@ -7,7 +7,7 @@ RUN mkdir /app
 WORKDIR /app
 
 COPY package.json package-lock.json /app/
-RUN npm install --no-optional
+RUN npm install npm@latest -g && npm ci --no-optional
 
 # Everything above should be cached by docker. The below should run on every build
 
