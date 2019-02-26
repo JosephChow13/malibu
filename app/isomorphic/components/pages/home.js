@@ -2,19 +2,22 @@
 import React from "react";
 import assetify from "@quintype/framework/assetify";
 import { object, shape } from "prop-types";
+import GtmTrackEvents from "../gtm-track-event";
 
 import { getCollectionTemplate } from "../get-collection-template";
 import img from "../../../assets/images/pw_maze_white.png";
 import { LazyCollection, WithPreview, replaceAllStoriesInCollection, LazyLoadImages } from "@quintype/components";
 
 export const HomePage = props => (
-  <div>
-    <h1>Home</h1>
-    <LazyLoadImages>
-      <LazyCollection collection={props.data.collection} collectionTemplates={getCollectionTemplate} lazyAfter={2} />
-    </LazyLoadImages>
-    <img src={assetify(img)} />
-  </div>
+  <GtmTrackEvents identifier="home">
+    <div>
+      <h1>Home</h1>
+      <LazyLoadImages>
+        <LazyCollection collection={props.data.collection} collectionTemplates={getCollectionTemplate} lazyAfter={2} />
+      </LazyLoadImages>
+      <img src={assetify(img)} />
+    </div>
+  </GtmTrackEvents>
 );
 
 HomePage.propTypes = {

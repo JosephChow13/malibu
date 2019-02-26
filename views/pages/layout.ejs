@@ -29,9 +29,12 @@
       <link rel="preload" href="<%= jsPath %>" as="script">
     <%_ }) _%>
     <%_ } _%>
+
+    <%- include("integrations/gtm-head") -%>
   </head>
 
   <body>
+    <%- include("integrations/gtm-body") -%>
     <div class="container">
       <header id="header"><%- navbar %></header>
       <div id='breaking-news-container'><%- breakingNews -%></div>
